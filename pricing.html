@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pricing — The Day Care</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@300;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green-1:#2ecc71;
+      --green-2:#27ae60;
+      --accent:#ffd54f;
+      --card:#e8fef0;
+      --bg:#f7fff9;
+      --muted:#2b6a3a;
+      --radius:14px;
+      --shadow:0 8px 24px rgba(39,174,96,0.12);
+
+      /* Larger fonts */
+      --body:18px;
+      --small:15px;
+      --nav:17px;
+      --h2:40px;
+      --h3:26px;
+    }
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f7fff9,#f0fff4);
+      font-family:"Nunito";
+      color:var(--muted);
+      font-size:var(--body);
+    }
+
+    header{
+      padding:20px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo{
+      width:70px;
+      height:70px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--green-1),var(--green-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-family:"Baloo 2";
+      font-size:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .brand h1{
+      margin:0;
+      font-size:26px;
+      font-family:"Baloo 2";
+      color:var(--green-2);
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+    }
+
+    nav a{
+      text-decoration:none;
+      font-size:var(--nav);
+      font-weight:700;
+      padding:10px 14px;
+      border-radius:10px;
+      color:var(--green-2);
+    }
+
+    nav a.cta{
+      background:linear-gradient(90deg,var(--accent),#ffe082);
+      color:#4e3b00;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    nav a:hover{ transform:translateY(-2px); transition:0.15s ease; }
+
+    /* Pricing Header Section */
+    .banner{
+      max-width:1100px;
+      margin:20px auto;
+      padding:26px;
+      background:var(--card);
+      border-radius:var(--radius);
+      display:flex;
+      gap:26px;
+      align-items:center;
+      box-shadow:var(--shadow);
+    }
+
+    .banner h2{
+      font-family:"Baloo 2";
+      font-size:var(--h2);
+      margin:0;
+      color:var(--green-2);
+    }
+
+    .banner p{ margin-top:8px; }
+
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:12px;
+      background:#ffcc80;
+      color:#663c00;
+      font-weight:700;
+      font-size:var(--small);
+      margin-top:10px;
+    }
+
+    /* Pricing Cards */
+    .grid{
+      max-width:1100px;
+      margin:30px auto 50px;
+      padding:0 24px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:24px;
+    }
+
+    .price-card{
+      background:white;
+      padding:24px;
+      text-align:center;
+      border-radius:var(--radius);
+      box-shadow:0 10px 28px rgba(2,48,20,0.05);
+    }
+
+    .icon{
+      width:70px;
+      height:70px;
+      border-radius:14px;
+      background:linear-gradient(135deg,#fff7e0,var(--accent));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      margin:0 auto 10px;
+      box-shadow:0 8px 20px rgba(255,181,60,0.12);
+    }
+
+    .price-card h3{
+      font-family:"Baloo 2";
+      font-size:var(--h3);
+      margin:8px 0;
+      color:var(--green-2);
+    }
+
+    .old-price{
+      text-decoration:line-through;
+      color:#999;
+      font-size:var(--small);
+    }
+
+    .new-price{
+      font-size:28px;
+      font-weight:800;
+      color:var(--green-2);
+      margin-top:6px;
+    }
+
+    .tiny{
+      font-size:var(--small);
+      color:#3c6b46;
+      margin-top:6px;
+    }
+
+    footer{
+      background:linear-gradient(90deg,var(--green-1),var(--green-2));
+      color:white;
+      padding:20px;
+      text-align:center;
+      margin-top:40px;
+      font-size:16px;
+    }
+
+    @media(max-width:900px){
+      .banner{flex-direction:column; text-align:center;}
+    }
+
+    .logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+     <img src="img/logo.jpeg" class="logo-img" alt="The Day Care Logo">
+    <div>
+      <h1>The Day Care</h1>
+      <div style="font-size:var(--small); color:#356e3b;">Happy kids • Relaxed parents</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Programs</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="admissions.html">Admissions</a>
+    <a class="cta" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <div>
+    <h2>Pricing & Plans</h2>
+    <p>Affordable and flexible childcare options for every family.</p>
+    <div class="badge">25% OFF — Introductory Offer!</div>
+  </div>
+
+  <!-- Cute SVG Illustration -->
+  <svg width="190" height="190" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="90" fill="#caffdd"/>
+    <g transform="translate(55,60)">
+      <circle cx="40" cy="-10" r="20" fill="#ffe0b2"/>
+      <rect x="22" y="10" width="36" height="50" rx="10" fill="#b3ffd0"/>
+      <circle cx="32" cy="-12" r="4"/>
+      <circle cx="48" cy="-12" r="4"/>
+      <path d="M34 0 q8 6 16 0" stroke="#3a2a00" stroke-width="2" fill="none"/>
+    </g>
+  </svg>
+</section>
+
+<!-- Pricing Grid -->
+<section class="grid">
+
+  <!-- Full Time -->
+  <div class="price-card">
+    <div class="icon">⏱️</div>
+    <h3>Full Time</h3>
+    <div class="old-price">₹6000</div>
+    <div class="new-price">₹4499</div>
+    <div class="tiny">Perfect for working parents</div>
+  </div>
+
+  <!-- Part Time -->
+  <div class="price-card">
+    <div class="icon">💛</div>
+    <h3>Part Time</h3>
+    <div class="old-price">₹4000</div>
+    <div class="new-price">₹2999</div>
+    <div class="tiny">Half-day flexible sessions</div>
+  </div>
+
+  <!-- Deposit -->
+  <div class="price-card">
+    <div class="icon">🏷️</div>
+    <h3>Deposit</h3>
+    <div class="old-price">₹1500</div>
+    <div class="new-price">₹1000</div>
+    <div class="tiny">One-time, non-refundable</div>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 The Day Care • Hyderabad
+</footer>
+
+</body>
+</html>

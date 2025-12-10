@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admissions — The Day Care</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@300;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green-1:#2ecc71;
+      --green-2:#27ae60;
+      --accent:#ffd54f;
+      --card:#e8fef0;
+      --bg:#f7fff9;
+      --muted:#2b6a3a;
+      --radius:14px;
+      --shadow:0 8px 26px rgba(39,174,96,0.12);
+
+      --body:18px;
+      --nav:17px;
+      --small:15px;
+      --h2:40px;
+      --h3:26px;
+    }
+
+    body{
+      margin:0;
+      background:linear-gradient(180deg,#f7fff9,#f0fff4);
+      font-family:"Nunito";
+      color:var(--muted);
+      font-size:var(--body);
+    }
+
+    /* Header */
+    header{
+      padding:20px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .logo{
+      width:70px;
+      height:70px;
+      background:linear-gradient(135deg,var(--green-1),var(--green-2));
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:32px;
+      font-family:"Baloo 2";
+      color:white;
+      box-shadow:var(--shadow);
+    }
+
+    .brand h1{
+      margin:0;
+      font-size:26px;
+      font-family:"Baloo 2";
+      color:var(--green-2);
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--green-2);
+      font-weight:700;
+      font-size:var(--nav);
+      padding:10px 14px;
+      border-radius:10px;
+    }
+
+    nav a.cta{
+      background:linear-gradient(90deg,var(--accent),#ffe082);
+      color:#4e3b00;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    nav a:hover{
+      transform:translateY(-2px);
+      transition:0.15s ease;
+    }
+
+    /* Banner */
+    .banner{
+      max-width:1100px;
+      margin:20px auto;
+      padding:26px;
+      background:var(--card);
+      border-radius:var(--radius);
+      display:flex;
+      gap:26px;
+      align-items:center;
+      box-shadow:var(--shadow);
+    }
+
+    .banner h2{
+      font-size:var(--h2);
+      font-family:"Baloo 2";
+      margin:0;
+      color:var(--green-2);
+    }
+
+    /* Form Section */
+    .form-section{
+      max-width:1100px;
+      margin:30px auto 40px;
+      padding:24px;
+      background:white;
+      border-radius:var(--radius);
+      box-shadow:0 10px 28px rgba(2,48,20,0.05);
+    }
+
+    h3{
+      margin:0 0 14px;
+      font-family:"Baloo 2";
+      font-size:var(--h3);
+      color:var(--green-2);
+    }
+
+    form{
+      display:grid;
+      gap:18px;
+    }
+
+    input, select, textarea{
+      width:100%;
+      padding:14px;
+      border-radius:12px;
+      border:2px solid #d8f5df;
+      font-size:var(--body);
+      font-family:"Nunito";
+      outline:none;
+      transition:0.2s ease;
+    }
+
+    input:focus, select:focus, textarea:focus{
+      border-color:var(--green-2);
+      box-shadow:0 0 0 4px rgba(46,204,113,0.15);
+    }
+
+    textarea{
+      height:120px;
+      resize:none;
+    }
+
+    button{
+      padding:16px;
+      border:none;
+      border-radius:12px;
+      font-size:20px;
+      font-weight:700;
+      color:white;
+      background:linear-gradient(90deg,var(--green-1),var(--green-2));
+      cursor:pointer;
+      box-shadow:0 8px 20px rgba(46,125,50,0.18);
+      transition:0.2s ease;
+      width:100%;
+    }
+
+    button:hover{
+      transform:translateY(-3px);
+    }
+
+    footer{
+      margin-top:40px;
+      background:linear-gradient(90deg,var(--green-1),var(--green-2));
+      padding:20px;
+      text-align:center;
+      color:white;
+      font-size:16px;
+    }
+
+    @media(max-width:900px){
+      .banner{flex-direction:column; text-align:center;}
+    }
+
+    .logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+      <img src="img/logo.jpeg" class="logo-img" alt="The Day Care Logo">
+    <div>
+      <h1>The Day Care</h1>
+      <div style="font-size:var(--small); color:#356e3b;">Happy kids • Relaxed parents</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Programs</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="admissions.html">Admissions</a>
+    <a class="cta" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <div style="flex:1;">
+    <h2>Admissions & Enrolment</h2>
+    <p>Fill out the enquiry form below — we’ll get in touch with all details!</p>
+  </div>
+
+  <!-- Cute SVG -->
+  <svg width="190" height="190" viewBox="0 0 200 200">
+    <circle cx="100" cy="100" r="90" fill="#caffdd"/>
+    <text x="72" y="118" font-size="60" fill="#27ae60">📝</text>
+  </svg>
+</section>
+
+<!-- Form Section -->
+<section class="form-section">
+  <h3>Admission Enquiry Form</h3>
+
+  <form action="#" method="POST">
+
+    <input type="text" placeholder="Parent’s Full Name" required />
+
+    <input type="text" placeholder="Child’s Name" required />
+
+    <input type="number" placeholder="Child’s Age (in years)" required />
+
+    <input type="tel" placeholder="Phone Number" required />
+
+    <input type="email" placeholder="Email Address" required />
+
+    <select required>
+      <option value="">Select Program</option>
+      <option>Infant Care</option>
+      <option>Toddler Time</option>
+      <option>Part Time</option>
+      <option>Full Time</option>
+      <option>Preschool Readiness</option>
+    </select>
+
+    <textarea placeholder="Any additional details or questions?"></textarea>
+
+    <button type="submit">Submit Enquiry</button>
+
+  </form>
+</section>
+
+<footer>
+  © 2025 The Day Care • Hyderabad
+</footer>
+
+</body>
+</html>

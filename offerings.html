@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Programs — The Day Care</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green-1: #2ecc71;
+      --green-2: #27ae60;
+      --accent: #ffd54f;
+      --card: #e8fef0;
+      --bg: #f7fff9;
+      --muted: #2b6a3a;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(39,174,96,0.12);
+
+      /* Larger fonts (Option B) */
+      --body: 18px;
+      --nav: 17px;
+      --small: 15px;
+      --h2: 40px;
+      --h3: 26px;
+    }
+
+    body{
+      margin:0;
+      font-family:"Nunito";
+      background:linear-gradient(180deg,#f7fff9,#f0fff4);
+      font-size:var(--body);
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    header{
+      padding:20px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .logo{
+      width:70px;
+      height:70px;
+      border-radius:12px;
+      background:linear-gradient(135deg,var(--green-1),var(--green-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Baloo 2";
+      font-size:32px;
+      color:white;
+      box-shadow:var(--shadow);
+    }
+
+    .brand h1{
+      margin:0;
+      font-family:"Baloo 2";
+      font-size:26px;
+      color:var(--green-2);
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+    }
+
+    nav a{
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:700;
+      text-decoration:none;
+      color:var(--green-2);
+      font-size:var(--nav);
+    }
+
+    nav a.cta{
+      background:linear-gradient(90deg,var(--accent),#ffe082);
+      color:#3a2a00;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    nav a:hover{ transform:translateY(-2px); transition:0.15s ease; }
+
+    /* Page Title Section */
+    .banner{
+      max-width:1100px;
+      margin: 20px auto;
+      background:var(--card);
+      padding:26px;
+      border-radius:var(--radius);
+      display:flex;
+      align-items:center;
+      gap:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .banner h2{
+      font-family:"Baloo 2";
+      font-size:var(--h2);
+      margin:0;
+      color:var(--green-2);
+    }
+
+    .banner p{
+      margin-top:10px;
+      font-size:var(--body);
+      color:#3d6f49;
+    }
+
+    /* Program Grid */
+    .grid{
+      max-width:1100px;
+      margin: 30px auto 40px;
+      padding:0 24px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:white;
+      padding:22px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 28px rgba(2,48,20,0.04);
+      text-align:center;
+    }
+
+    .icon{
+      width:64px;
+      height:64px;
+      border-radius:14px;
+      margin:0 auto 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(135deg,#fff7e0,var(--accent));
+      font-size:30px;
+      box-shadow:0 8px 20px rgba(255,181,60,0.12);
+    }
+
+    .card h3{
+      margin:10px 0 8px;
+      font-family:"Baloo 2";
+      font-size:var(--h3);
+      color:var(--green-2);
+    }
+
+    .card p{
+      margin:0;
+      color:#3c6b46;
+      font-size:var(--body);
+    }
+
+    footer{
+      background:linear-gradient(90deg,var(--green-1),var(--green-2));
+      color:white;
+      text-align:center;
+      padding:20px;
+      font-size:16px;
+      margin-top:40px;
+    }
+
+    @media(max-width:900px){
+      .banner{flex-direction:column; text-align:center;}
+    }
+
+    .logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+      <img src="img/logo.jpeg" class="logo-img" alt="The Day Care Logo">
+    <div>
+      <h1>The Day Care</h1>
+      <div style="font-size:var(--small); color:#356e3b;">Happy kids • Relaxed parents</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Programs</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="admissions.html">Admissions</a>
+    <a class="cta" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <div style="flex:1;">
+    <h2>Our Programs & Offerings</h2>
+    <p>Designed to help your child grow joyfully — socially, emotionally, creatively and intellectually.</p>
+  </div>
+
+  <!-- Cute SVG Illustration -->
+  <svg width="190" height="190" viewBox="0 0 190 190">
+    <circle cx="95" cy="95" r="85" fill="#caffdd"/>
+    <g transform="translate(55,60)">
+      <circle cx="40" cy="-10" r="20" fill="#ffe0b2"/>
+      <rect x="22" y="10" width="36" height="50" rx="10" fill="#b3ffd0"/>
+      <circle cx="32" cy="-12" r="4"/>
+      <circle cx="48" cy="-12" r="4"/>
+      <path d="M34 0 q8 6 16 0" stroke="#3a2a00" stroke-width="2" fill="none"/>
+    </g>
+  </svg>
+</section>
+
+<!-- Programs -->
+<section class="grid">
+
+  <div class="card">
+    <div class="icon">👶</div>
+    <h3>Infant Care</h3>
+    <p>Safe, nurturing care for ages 1–2 with personalized attention.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🧸</div>
+    <h3>Toddler Time</h3>
+    <p>Play-based activities to build motor, social & emotional skills.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🎨</div>
+    <h3>Activity & Fun</h3>
+    <p>Arts, crafts, music & creative sessions every day.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🛡️</div>
+    <h3>CCTV & Security</h3>
+    <p>Complete surveillance & safety in every room.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">👩‍🏫</div>
+    <h3>Preschool Readiness</h3>
+    <p>Early academics & structured routines to prepare for school.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">⏰</div>
+    <h3>Extended Hours</h3>
+    <p>Flexible timings to support working parents.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🌈</div>
+    <h3>Creative Explorers</h3>
+    <p>Color, shapes, patterns, building and imaginative play.</p>
+  </div>
+
+  <div class="card">
+    <div class="icon">🏃</div>
+    <h3>Active Adventurers</h3>
+    <p>Movement games to boost physical development.</p>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 The Day Care • Hyderabad
+</footer>
+
+</body>
+</html>

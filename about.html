@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — The Day Care</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green-1: #2ecc71;
+      --green-2: #27ae60;
+      --accent: #ffd54f;
+      --card: #e8fef0;
+      --bg: #f7fff9;
+      --muted: #2b6a3a;
+      --radius: 14px;
+      --shadow: 0 8px 26px rgba(39,174,96,0.12);
+
+      /* Font sizes (Option B) */
+      --body: 18px;
+      --small: 15px;
+      --h2: 40px;
+      --h3: 26px;
+      --nav: 17px;
+    }
+
+    body{
+      margin:0;
+      font-family:"Nunito";
+      background:linear-gradient(180deg,#f7fff9,#f0fff4);
+      font-size:var(--body);
+      color:var(--muted);
+    }
+
+    header{
+      padding:20px 22px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .logo{
+      width:70px;
+      height:70px;
+      background:linear-gradient(135deg,var(--green-1),var(--green-2));
+      color:white;
+      border-radius:12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Baloo 2";
+      font-size:32px;
+      box-shadow:var(--shadow);
+    }
+
+    .brand h1{
+      margin:0;
+      font-family:"Baloo 2";
+      font-size:26px;
+      color:var(--green-2);
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--green-2);
+      font-size:var(--nav);
+      font-weight:700;
+      padding:10px 14px;
+      border-radius:10px;
+    }
+
+    nav a:hover{ transform:translateY(-2px); transition:0.15s ease; }
+
+    nav a.cta{
+      background:linear-gradient(90deg,var(--accent),#ffe082);
+      color:#3a2a00;
+      box-shadow:0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    /* Page Banner */
+    .banner{
+      max-width:1100px;
+      margin: 20px auto;
+      background:var(--card);
+      padding:26px;
+      border-radius:var(--radius);
+      display:flex;
+      gap:24px;
+      align-items:center;
+      box-shadow:var(--shadow);
+    }
+
+    .banner h2{
+      font-family:"Baloo 2";
+      font-size:var(--h2);
+      margin:0;
+      color:var(--green-2);
+    }
+
+    .banner p{
+      margin-top:10px;
+      color:#3d6f49;
+    }
+
+    /* about content */
+    .content{
+      max-width:1100px;
+      margin: 30px auto;
+      padding:0 24px;
+    }
+
+    .section{
+      background:white;
+      padding:24px;
+      margin-bottom:20px;
+      border-radius:var(--radius);
+      box-shadow:0 10px 28px rgba(2,48,20,0.04);
+    }
+
+    .section h3{
+      margin:0 0 10px 0;
+      font-family:"Baloo 2";
+      font-size:var(--h3);
+      color:var(--green-2);
+    }
+
+    ul{
+      margin:12px 0 0 20px;
+      font-size:var(--body);
+      color:#3d6f49;
+    }
+
+    /* Illustration */
+    .illustration{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    footer{
+      margin-top:40px;
+      background:linear-gradient(90deg,var(--green-1),var(--green-2));
+      color:white;
+      text-align:center;
+      padding:20px;
+      font-size:16px;
+    }
+
+    @media(max-width:900px){
+      .banner{flex-direction:column; text-align:center;}
+    }
+
+    .logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+.logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+      <img src="img/logo.jpeg" class="logo-img" alt="The Day Care Logo">
+    <div>
+      <h1>The Day Care</h1>
+      <div style="font-size:var(--small); color:#356e3b;">Happy kids • Relaxed parents</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Programs</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="admissions.html">Admissions</a>
+    <a class="cta" href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- Banner -->
+<section class="banner">
+  <div style="flex:1;">
+    <h2>About Our Day Care</h2>
+    <p>We are committed to creating a safe, joyful, educational space where children thrive socially, emotionally, physically, and mentally.</p>
+  </div>
+
+  <!-- Cute Illustration -->
+  <div class="illustration">
+    <svg width="200" height="200" viewBox="0 0 200 200">
+      <circle cx="100" cy="100" r="90" fill="#caffdd"/>
+      <g transform="translate(50,70)">
+        <circle cx="50" cy="-10" r="20" fill="#ffe0b2"/>
+        <rect x="30" y="10" width="40" height="55" rx="10" fill="#a7f7b0"/>
+        <circle cx="42" cy="-12" r="4"/>
+        <circle cx="58" cy="-12" r="4"/>
+        <path d="M44 2 q8 6 16 0" stroke="#3a2a00" stroke-width="2" fill="none"/>
+      </g>
+    </svg>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="content">
+
+  <div class="section">
+    <h3>Our Mission</h3>
+    <p>To offer a nurturing, loving, safe environment where children explore, learn and grow through structured activities and meaningful interactions.</p>
+  </div>
+
+  <div class="section">
+    <h3>Our Vision</h3>
+    <p>To be a trusted childcare space where parents feel confident and children feel joyful, encouraged, and supported every day.</p>
+  </div>
+
+  <div class="section">
+    <h3>Why Parents Trust Us</h3>
+    <ul>
+      <li>Internationally aligned standards (UK-based)</li>
+      <li>CCTV monitored classrooms</li>
+      <li>Caring & trained staff</li>
+      <li>Safe & hygienic environment</li>
+      <li>Activity-based learning approach</li>
+      <li>Emotional & social growth programs</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 The Day Care • Hyderabad
+</footer>
+
+</body>
+</html>

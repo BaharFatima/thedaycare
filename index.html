@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Day Care — Home</title>
+
+  <!-- Playful fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green-1: #2ecc71;
+      --green-2: #27ae60;
+      --accent: #ffd54f;
+      --bg: #f3fff6;
+      --card: #e8fef0;
+      --muted: #2b6a3a;
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(39,174,96,0.12);
+
+      /* ⬆️ NEW FONT SCALE */
+      --body: 18px;
+      --small: 15px;
+      --nav: 17px;
+      --h2: 40px;
+      --h3: 24px;
+      --btn: 17px;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Nunito", system-ui;
+      background: linear-gradient(180deg, #f7fff9 0%, #f0fff4 100%);
+      color: var(--muted);
+      font-size: var(--body);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+
+    header{
+      padding:20px 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    .logo{
+      width:70px;
+      height:70px;
+      border-radius:12px;
+      background: linear-gradient(135deg, var(--green-1), var(--green-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:"Baloo 2";
+      font-size:30px;
+      color:white;
+      box-shadow: var(--shadow);
+    }
+
+    .brand h1{
+      margin:0;
+      font-family:"Baloo 2";
+      font-size:26px;
+      color:var(--green-2);
+    }
+
+    .tag{
+      font-size:var(--small);
+      margin-top:4px;
+      opacity:0.9;
+    }
+
+    nav{
+      display:flex;
+      gap:14px;
+      align-items:center;
+    }
+
+    nav a{
+      text-decoration:none;
+      color:var(--green-2);
+      background:transparent;
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:700;
+      font-size:var(--nav);
+    }
+
+    nav a.cta{
+      background: linear-gradient(90deg,var(--accent),#ffe082);
+      color:#3a2a00;
+      box-shadow:0 8px 22px rgba(0,0,0,0.08);
+    }
+
+    nav a:hover{
+      transform:translateY(-2px);
+      transition:0.15s ease;
+    }
+
+    /* HERO */
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:32px;
+      align-items:center;
+      padding:32px;
+      max-width:1100px;
+      margin:20px auto 30px;
+    }
+
+    .hero-card{
+      background: linear-gradient(180deg, var(--card), white);
+      padding:32px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow{
+      display:inline-block;
+      background:linear-gradient(90deg,#a3f7b5,#c2ffd6);
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:var(--small);
+      font-weight:700;
+      margin-bottom:14px;
+      color:var(--green-2);
+    }
+
+    .hero h2{
+      margin:0 0 16px 0;
+      font-family:"Baloo 2";
+      font-size:var(--h2);
+      line-height:1.1;
+      color:var(--green-2);
+    }
+
+    .hero p.lead{
+      margin:0 0 20px 0;
+      font-size:var(--body);
+      color:#3d6f49;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn{
+      padding:14px 20px;
+      border-radius:12px;
+      border:none;
+      cursor:pointer;
+      font-weight:700;
+      font-size:var(--btn);
+      text-decoration:none;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .btn-primary{
+      background: linear-gradient(90deg,var(--green-1),var(--green-2));
+      color:white;
+      box-shadow:0 8px 20px rgba(46,125,50,0.18);
+    }
+
+    .btn-ghost{
+      background:transparent;
+      border:2px solid rgba(39,174,96,0.15);
+      color:var(--green-2);
+    }
+
+    .illustration{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
+    }
+
+    /* FEATURES */
+    .features{
+      max-width:1100px;
+      margin:0 auto 50px;
+      display:grid;
+      gap:20px;
+      padding:0 24px;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    }
+
+    .feature{
+      background:white;
+      padding:22px;
+      border-radius:14px;
+      box-shadow:0 10px 28px rgba(2,48,20,0.04);
+      display:flex;
+      gap:14px;
+    }
+
+    .feature .icon{
+      width:60px;
+      height:60px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#fff7e0,var(--accent));
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:26px;
+      box-shadow:0 6px 18px rgba(255,181,60,0.12);
+    }
+
+    .feature h4{
+      margin:0 0 6px 0;
+      font-size:20px;
+      color:var(--green-2);
+    }
+
+    .feature p{
+      margin:0;
+      font-size:var(--small);
+    }
+
+    footer{
+      margin-top:50px;
+      background:linear-gradient(90deg,var(--green-1),var(--green-2));
+      color:white;
+      padding:20px;
+      font-size:16px;
+      text-align:center;
+    }
+
+    @media(max-width:880px){
+      .hero{
+        grid-template-columns:1fr;
+        padding:22px;
+      }
+      .illustration{order:-1}
+    }
+
+    .logo-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    <img src="img/logo.jpeg" class="logo-img" alt="The Day Care Logo">
+
+    <div>
+      <h1>The Day Care</h1>
+      <div class="tag">Happy kids • Relaxed parents</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="offerings.html">Programs</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="admissions.html">Admissions</a>
+    <a class="cta" href="contact.html">Enrol Now</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="hero-card">
+      <div class="eyebrow">Now Enrolling • Limited Seats</div>
+
+      <h2>Safe, playful learning for ages 1–5</h2>
+
+      <p class="lead">
+        Activity-based care, CCTV-monitored space, trained staff & joyful learning every day.
+      </p>
+
+      <div class="actions">
+        <a href="admissions.html" class="btn btn-primary">Register a Visit ➜</a>
+        <a href="offerings.html" class="btn btn-ghost">View Programs</a>
+      </div>
+
+      <div style="margin-top:18px; font-size:var(--small); color:var(--green-2);">
+        <strong>Location:</strong> Hyderabad • <strong>Open:</strong> 7:30am – 7:00pm
+      </div>
+    </div>
+
+    <div class="illustration">
+      <!-- SAME SVG illustration you loved -->
+      <!-- (Keeping it unchanged for style consistency) -->
+      <svg width="420" height="300" viewBox="0 0 420 300">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1">
+            <stop offset="0" stop-color="#a9f7c7"/>
+            <stop offset="1" stop-color="#6df09b"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="230" width="420" height="70" fill="#e8fff0"/>
+        <circle cx="360" cy="40" r="28" fill="#ffd54f"/>
+        <g transform="translate(60,130)">
+          <circle cx="0" cy="-20" r="20" fill="#ffe0b2"/>
+          <rect x="-22" y="-2" width="44" height="46" rx="9" fill="url(#g1)"/>
+          <circle cx="-10" cy="-22" r="4"/>
+          <circle cx="4" cy="-22" r="4"/>
+          <path d="M-8 -6 q8 10 24 0" stroke="#3a2a00" stroke-width="2" fill="none"/>
+        </g>
+        <g transform="translate(220,120)">
+          <circle cx="0" cy="-20" r="20" fill="#ffd1dc"/>
+          <rect x="-22" y="-2" width="44" height="46" rx="9" fill="#fff7e0"/>
+          <circle cx="-9" cy="-22" r="4"/>
+          <circle cx="5" cy="-22" r="4"/>
+          <path d="M-7 -6 q8 10 24 0" stroke="#3a2a00" stroke-width="2" fill="none"/>
+          <ellipse cx="34" cy="-60" rx="18" ry="22" fill="#ffd2a6"/>
+          <path d="M18 -42 q18 28 38 48" stroke="#7a3b00" stroke-width="2" fill="none"/>
+        </g>
+        <g transform="translate(120,210)">
+          <rect x="0" y="0" width="36" height="36" rx="6" fill="#ff8a80"/>
+          <rect x="44" y="-10" width="36" height="36" rx="6" fill="#ffd54f"/>
+          <rect x="86" y="0" width="36" height="36" rx="6" fill="#81d4fa"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <div class="icon">🎨</div>
+      <div><h4>Creative Play</h4><p>Art, music & imagination time daily.</p></div>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🛡️</div>
+      <div><h4>Safe & Secure</h4><p>Trained staff + CCTV monitoring.</p></div>
+    </div>
+
+    <div class="feature">
+      <div class="icon">🍎</div>
+      <div><h4>Nutritious Snacks</h4><p>Healthy meals for growing minds.</p></div>
+    </div>
+
+    <div class="feature">
+      <div class="icon">⏰</div>
+      <div><h4>Flexible Timings</h4><p>Full-time & part-time options.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2025 The Day Care • Hyderabad • Call: +91 98XXXXXXX
+</footer>
+
+</body>
+</html>
